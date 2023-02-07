@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"jim123",
+    "password":"jim123"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"jim123",
+    "password":"jim123"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q2M2ZmYTg3Y2U5OTY0ZWFkMDAzM2YiLCJpYXQiOjE2NzU1NzMzMjN9.8Wtmk9cRRGu6SJPM1SgKqeeg8IF_SLE9X4uqlUVwoHY
+
+{
+    "title":"Java",
+    "description":"Must be professional",
+    "url":"youtube.com",
+    "status":"LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q2M2ZmYTg3Y2U5OTY0ZWFkMDAzM2YiLCJpYXQiOjE2NzU2NTMyNzh9.8kJI6IgM7HOusjy84osXsTwxn-kz027eHU4SLA-PUfw
+
+###
+PUT http://localhost:5000/api/posts/update/63d6a6334141b54de572c586
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q2M2ZmYTg3Y2U5OTY0ZWFkMDAzM2YiLCJpYXQiOjE2NzUwNTQxMjF9.W58lddfEUOsJhp9p-3J4-S8AZqpOLET5kbx0sdTdW6Q
+
+{
+    "title":"Jave (Update)",
+    "description": "Something more to learn",
+    "url": "https://java.org",
+    "status":"LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/delete/63d6402387ce9964ead00342
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2Q2M2ZmYTg3Y2U5OTY0ZWFkMDAzM2YiLCJpYXQiOjE2NzUwNTQxMjF9.W58lddfEUOsJhp9p-3J4-S8AZqpOLET5kbx0sdTdW6Q
